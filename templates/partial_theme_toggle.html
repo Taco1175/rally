@@ -1,0 +1,17 @@
+<button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; z-index: 1000; cursor: pointer; padding: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: var(--body-font);">
+  🌓 Toggle Theme
+</button>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  const storedTheme = localStorage.getItem("theme") || "light";
+
+  if (storedTheme === "dark") {
+    document.documentElement.classList.add("dark-mode");
+  }
+
+  btn.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>
