@@ -928,3 +928,17 @@ footer a:hover {
     }
 }
 /** End Responsive Design **/
+/* Dark Mode Logic */
+.dark-mode {
+    --white: #121212;
+    --black: #f0f0f0;
+    --off-white: #1e1e1e;
+    --silver: #333333;
+    --text-main: #e0e0e0;
+    --bg-color: #121212;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
